@@ -35,20 +35,23 @@ This project lets you test your knowledge with multiple-choice questions and kee
 
 1. Clone this repository:
 
-        git clone https://github.com/USERNAME/REPO_NAME.git
-        cd General-Knowledge-Quiz
+        https://github.com/faizanfk01/Quiz-Game.git
 
 2. Navigate to the project folder:
 
         cd General-Knowledge-Quiz
 
-3. Run the quiz:
+3. Navigate to the project folder:
+
+        cd General-Knowledge-Quiz
+
+4. Run the quiz:
 
         python quiz.py
 
-4. Answer the questions by typing a, b, c, or d.
+5. Answer the questions by typing a, b, c, or d.
 
-5. At the end, see your score and whether you passed.
+6. At the end, see your score and whether you passed.
 
 ------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-### 🌤️ Weather Forecast App  
+# 🌤️ Weather Forecast App  
 
 A simple and interactive **Weather Forecast Application** built in Python using the **OpenWeatherMap API**.  
 This program allows you to **check real-time weather conditions and temperature** of any city in the world!  

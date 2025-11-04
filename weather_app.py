@@ -14,7 +14,7 @@ data = get_data.json()
 get_weather = data["weather"][0]["description"].capitalize()
 get_temperature = data["main"]["temp"]
 
-temperature_in_celsius = get_temperature - 273.15 # Converts temperature to Celsius
+temperature_in_celsius = get_temperature - 273.15
 
 print(f"The Weather in {city} is {get_weather}")
 print(f"The Temperature in {city} is {temperature_in_celsius:.2f}°C")

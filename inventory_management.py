@@ -10,7 +10,6 @@ def extract_product_id(line):
         return ""
     
 def parse_product_line(line):
-    """Extracts Product data from text line into dictionary."""
     try:
         parts = line.split(" | ")
         name = parts[0].split(": ")[1]
@@ -29,13 +28,12 @@ def parse_product_line(line):
         return None
     
 def export_to_csv():
-    """Exports text file data to CSV."""
     try:
         with open(data_file, "r") as txtfile:
             lines = [line.strip() for line in txtfile if line.strip()]
         
         if not lines:
-            print("⚠️ No data to export!")
+            print("No data to export!")
             return
         
         employees = [parse_product_line(line) for line in lines if parse_product_line(line)]
@@ -46,10 +44,10 @@ def export_to_csv():
             writer.writeheader()
             writer.writerows(employees)
         
-        print(f"✅ Data exported successfully to {csv_file}")
+        print(f"Data exported successfully to {csv_file}")
     
     except FileNotFoundError:
-        print("⚠️ No text file found to export!")
+        print("No text file found to export!")
 
 def is_valid_text(text):
     allowed = set("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ -'.")
@@ -67,56 +65,56 @@ def id_exists(product_id):
 
 
 def add_product():
-    print("\n📝 Add New Product")
+    print("\nAdd New Product")
     while True:
-        name = input("🎁 Enter product name: ").title().strip()
+        name = input("Enter product name: ").title().strip()
         if is_valid_text(name):
             break
         else:
-            print("❌ Name should not contain numbers or special characters.")
+            print("Name should not contain numbers or special characters.")
 
     while True:
-        category = input("💼 Enter product category: ").title().strip()
+        category = input("Enter product category: ").title().strip()
         if is_valid_text(category):
             break
         else:
-            print("❌ Category should not contain numbers or special characters.")
+            print("Category should not contain numbers or special characters.")
 
     while True:
-        price = input("💰 Enter product price: ")
+        price = input("Enter product price: ")
         if price.isdigit():
             price = int(price)
             break
         else:
-            print("❌ product should be a valid number.")
+            print("Product should be a valid number.")
 
     while True:
-        stock = input("🎁 Enter product stock quantity: ")
+        stock = input("Enter product stock quantity: ")
         if stock.isdigit():
             stock = int(stock)
             break
         else:
-            print("❌ Stock should be a valid number.")
+            print("Stock should be a valid number.")
 
     while True:
-        product_id = input("🆔 Enter product ID: ")
+        product_id = input("Enter product ID: ")
         if product_id.isdigit() and not id_exists(product_id):
             product_id = int(product_id)
             break
         else:
-            print("❌ Invalid or duplicate product ID.")
+            print("Invalid or duplicate product ID.")
 
     with open(data_file, 'a+') as f:
         f.seek(0)
         if f.read().strip():
             f.write("\n")
         f.write(f"The Product name is: {name} | Product Category is: {category} | Price is: Rs. {price} | Stock is: {stock} | Product ID is: {product_id}")
-        print(f"\n✅ {name} added successfully!")
+        print(f"\n{name} added successfully!")
 
 
 def view_products():
-    print("\n🔍 View Product Details")
-    product = input("🔎 Enter the name, or Product ID to search: ").strip()
+    print("\nView Product Details")
+    product = input("Enter the name, or Product ID to search: ").strip()
     found = False
     results = []
     try:
@@ -131,59 +129,59 @@ def view_products():
                         results.append(f"{line.strip()}")
                         found = True
         if found:
-            print("\n📋 Product Details are:\n")
+            print("\nProduct Details are:\n")
             for result in results:
                 print(result)
 
         else:
-            print(f"❌ No details found for {product}.")
+            print(f"No details found for {product}.")
 
     except FileNotFoundError:
-        print("⚠️ No data file found. Save something first!")
+        print("No data file found. Save something first!")
 
 def update_products():
-    print("\n✏️  Update Product Details")
+    print("\nUpdate Product Details")
     while True:
-        product_id = input("🆔 Enter the Product ID to update: ").strip()
+        product_id = input("Enter the Product ID to update: ").strip()
         updated_lines = []
         found = False
         try:
             with open(data_file, "r") as file:
                 for line in file:
                     if extract_product_id(line) == product_id:
-                        print(f"\n📄 Found: {line.strip()}\n")
+                        print(f"\nFound: {line.strip()}\n")
                         while True:
-                            name = input("🎁 New name: ").title().strip()
+                            name = input("New name: ").title().strip()
                             if is_valid_text(name):
                                 break
                             else:
-                                print("❌ Name should not contain numbers or special characters.")
+                                print("Name should not contain numbers or special characters.")
 
                         while True:
-                            category = input("💼 New Category: ").title().strip()
+                            category = input("New Category: ").title().strip()
                             if is_valid_text(category):
                                 break
                             else:
-                                print("❌ Category should not contain numbers or special characters.")
+                                print("Category should not contain numbers or special characters.")
 
                         try:
                             while True:
-                                price = input("💰 New Price: ").strip()
+                                price = input("New Price: ").strip()
                                 if price.isdigit():
                                     break
                                 else:
-                                    print("❌ Price should be a valid number.")
+                                    print("Price should be a valid number.")
                             
                             while True:
-                                stock = input("🎁 New Stock Quantity: ").strip()
+                                stock = input("New Stock Quantity: ").strip()
                                 if stock.isdigit():
                                     break
                                 else:
-                                    print("❌ Stock should be a valid number.")
+                                    print("Stock should be a valid number.")
 
 
                         except ValueError:
-                            print("⚠️ Please enter a valid number for Price.")
+                            print("Please enter a valid number for Price.")
                             return
                         
                         updated_line = f"The Product name is: {name} | Product Category is: {category} | Price is: Rs. {price} | Stock is: {stock} | Product ID is: {product_id}\n"
@@ -195,31 +193,31 @@ def update_products():
             if found:
                 with open(data_file, "w") as file:
                     file.writelines(updated_lines)
-                print("\n✅ Product details updated successfully!")
+                print("\nProduct details updated successfully!")
                 break
             else:
-                print("❌ No Product found with that ID.")
+                print("No Product found with that ID.")
 
         except FileNotFoundError:
-            print("⚠️ No data file found. Add some Product first!")
+            print("No data file found. Add some Product first!")
             break
 
 
 def delete_product():
     print("\n🗑️  Delete Product")
     while True:
-        product_id = input("🆔 Enter the Product ID to delete: ").strip()
+        product_id = input("Enter the Product ID to delete: ").strip()
         updated_lines = []
         found = False
-        confirm = input("❓ Are you sure? Type 'yes' to proceed: ").lower()
+        confirm = input("Are you sure? Type 'yes' to proceed: ").lower()
         if confirm != "yes":
-            print("❌ Action cancelled.")
+            print("Action cancelled.")
             return
         else:
             with open(data_file, "r") as file:
                 for line in file:
                     if extract_product_id(line) == product_id:
-                        print(f"🧾 Deleting: {line.strip()}")
+                        print(f"Deleting: {line.strip()}")
                         found = True
                         continue
                     if line.strip():
@@ -228,28 +226,28 @@ def delete_product():
             if found:
                 with open(data_file, "w") as file:
                     file.writelines("\n".join(updated_lines))
-                print("\n✅ Product deleted successfully!")
+                print("\nProduct deleted successfully!")
                 break
             else:
-                print("❌ No Product found with that ID.")
+                print("No Product found with that ID.")
 
 
 def run_product_program():
-    print("\n👋 Welcome to the Product Management System!")
+    print("\nWelcome to the Product Management System!")
     while True:
-      print("\n📌 ---- MENU ----\n1️⃣  Add Product\n2️⃣  View All Products\n3️⃣  View Product\n4️⃣  Update Product\n5️⃣  Delete Product\n6️⃣  Export to CSV\n7️⃣  Exit")
-      choice = input("👉 Choose an option: ").lower().strip()
+      print("\n---- MENU ----\n1️. Add Product\n2️. View All Products\n3️. View Product\n4️. Update Product\n5️. Delete Product\n6️. Export to CSV\n7️. Exit")
+      choice = input("Choose an option: ").lower().strip()
       if "add" in choice or "1" in choice:
           add_product()
 
       elif "all" in choice or "2" in choice:
         try:
             with open(data_file, "r") as file:
-                print("\n📋 All Products:\n")
+                print("\nAll Products:\n")
                 print(file.read())
 
         except FileNotFoundError:
-            print("⚠️ No data file found. Add Products first!")
+            print("No data file found. Add Products first!")
 
       elif "view" in choice or "3" in choice:
           view_products()
@@ -264,7 +262,7 @@ def run_product_program():
             export_to_csv()
 
       elif "exit" in choice or "7" in choice:
-          print("\n👋 Goodbye! Have a productive day!\n")
+          print("\nGoodbye! Have a productive day!\n")
           break
       
       else:

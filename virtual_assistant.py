@@ -15,7 +15,6 @@ def take_command():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
-        # speaker.Speak("Listening...")
         recognizer.adjust_for_ambient_noise(source)
         audio = recognizer.listen(source)
     try:
@@ -25,11 +24,9 @@ def take_command():
         return query.lower()
     except sr.UnknownValueError:
         print("Sorry, I did not understand.")
-        # speaker.Speak("Sorry, I did not understand.")
         return ""
     except sr.RequestError:
         print("Speech service is unavailable.")
-        # speaker.Speak("Speech service is unavailable.")
         return ""
 
 def open_ai(prompt):
@@ -85,7 +82,7 @@ def save_credentials():
     with open("credentials.txt", "a") as file:
         file.write(f"{website} | Email: {email} | Password: {password}\n")
 
-    print(f"\n✅ Email and password for '{website}' saved successfully!\n")
+    print(f"\nEmail and password for '{website}' saved successfully!\n")
     speaker.Speak(f"Email and password for '{website}' saved successfully!")
     print("What do you want to do next?")
     speaker.Speak("What do you want to do next?")
@@ -109,15 +106,15 @@ def view_credentials():
                     speaker.Speak("What do you want to do next?")
                     found = True
         if not found:
-            print(f"❌ No credentials found for {website}.")
+            print(f"No credentials found for {website}.")
             speaker.Speak(f"No credentials found for {website}.")
     except FileNotFoundError:
         speaker.Speak("No data file found. Save something first!")
-        print("⚠️ No data file found. Save something first!")
+        print("No data file found. Save something first!")
 
 
 def run_credential_program():
-    print("\nWelcome to Email & Password Manager 🔐")
+    print("\nWelcome to Email & Password Manager")
     speaker.Speak("Welcome to Email & Password Manager")
     while True:
       print("Do you want to [save] credentials or [view] data? say 'exit' to quit: ")
@@ -128,7 +125,7 @@ def run_credential_program():
       elif "view" in choice :
           view_credentials()
       elif "exit" in choice:
-          print("Goodbye! 👋")
+          print("Goodbye!")
           speaker.Speak("Goodbye!")
           break
       else:
@@ -159,44 +156,44 @@ def id_exists(emp_id):
 
 
 def add_employee():
-    print("\n📝 Add New Employee")
+    print("\nAdd New Employee")
     speaker.Speak("Add New Employee")
     while True:
         speaker.Speak("Enter employee name: ")
-        name = input("👤 Enter employee name: ").title().strip()
+        name = input("Enter employee name: ").title().strip()
         if is_valid_text(name):
             break
         else:
-            print("❌ Name should not contain numbers or special characters.")
+            print("Name should not contain numbers or special characters.")
             speaker.Speak("Name should not contain numbers or special characters.")
 
     while True:
         speaker.Speak("Enter employee role: ")
-        role = input("💼 Enter employee role: ").title().strip()
+        role = input("Enter employee role: ").title().strip()
         if is_valid_text(role):
             break
         else:
-            print("❌ Role should not contain numbers or special characters.")
+            print("Role should not contain numbers or special characters.")
             speaker.Speak("Role should not contain numbers or special characters.")
 
     while True:
         speaker.Speak("Enter Employee salary: ")
-        salary = input("💰 Enter Employee salary: ")
+        salary = input("Enter Employee salary: ")
         if salary.isdigit():
             salary = int(salary)
             break
         else:
-            print("❌ Salary should be a valid number.")
+            print("Salary should be a valid number.")
             speaker.Speak("Salary should be a valid number.")
 
     while True:
         speaker.Speak("Enter employee ID: ")
-        emp_id = input("🆔 Enter employee ID: ")
+        emp_id = input("Enter employee ID: ")
         if emp_id.isdigit() and not id_exists(emp_id):
             emp_id = int(emp_id)
             break
         else:
-            print("❌ Invalid or duplicate Employee ID.")
+            print("Invalid or duplicate Employee ID.")
             speaker.Speak("Invalid or duplicate Employee ID.")
 
     with open(data_file, 'a+') as f:
@@ -204,15 +201,15 @@ def add_employee():
         if f.read().strip():
             f.write("\n")
         f.write(f"The Employee name is: {name} | His/Her Role: {role} | Salary: Rs. {salary} | Employee ID: {emp_id}")
-        print(f"\n✅ {name} added successfully!")
+        print(f"\n{name} added successfully!")
         speaker.Speak(f"{name} added successfully!")
 
 
 def view_employees():
-    print("\n🔍 View Employee Details")
+    print("\nView Employee Details")
     speaker.Speak("View Employee Details")
     speaker.Speak("Enter the name, role, or employee ID to search: ")
-    employee = input("🔎 Enter the name, role, or employee ID to search: ").strip()
+    employee = input("Enter the name, role, or employee ID to search: ").strip()
     found = False
     results = []
     try:
@@ -227,64 +224,64 @@ def view_employees():
                         results.append(f"{line.strip()}")
                         found = True
         if found:
-            print("\n📋 Employee Details are:\n")
+            print("\nEmployee Details are:\n")
             speaker.Speak("Employee Details are:")
             for result in results:
                 print(result)
                 speaker.Speak(result)
 
         else:
-            print(f"❌ No details found for {employee}.")
+            print(f"No details found for {employee}.")
             speaker.Speak(f"No details found for {employee}.")
 
     except FileNotFoundError:
-        print("⚠️ No data file found. Save something first!")
+        print("No data file found. Save something first!")
         speaker.Speak("No data file found. Save something first!")
 
 def update_employee():
-    print("\n✏️  Update Employee Details")
+    print("\nUpdate Employee Details")
     speaker.Speak("Update Employee Details")
     while True:
         speaker.Speak("Enter the Employee ID to update: ")
-        emp_id = input("🆔 Enter the Employee ID to update: ").strip()
+        emp_id = input("Enter the Employee ID to update: ").strip()
         updated_lines = []
         found = False
         try:
             with open(data_file, "r") as file:
                 for line in file:
                     if extract_emp_id(line) == emp_id:
-                        print(f"\n📄 Found: {line.strip()}\n")
+                        print(f"\nFound: {line.strip()}\n")
                         speaker.Speak(f"Found: {line.strip()}")
                         while True:
                             speaker.Speak("New name: ")
-                            name = input("👤 New name: ").title().strip()
+                            name = input("New name: ").title().strip()
                             if is_valid_text(name):
                                 break
                             else:
-                                print("❌ Name should not contain numbers or special characters.")
+                                print("Name should not contain numbers or special characters.")
                                 speaker.Speak("Name should not contain numbers or special characters.")
 
                         while True:
                             speaker.Speak("New role: ")
-                            role = input("💼 New role: ").title().strip()
+                            role = input("New role: ").title().strip()
                             if is_valid_text(role):
                                 break
                             else:
-                                print("❌ Role should not contain numbers or special characters.")
+                                print("Role should not contain numbers or special characters.")
                                 speaker.Speak("Role should not contain numbers or special characters.")
 
                         try:
                             while True:
                                 speaker.Speak("New salary: ")
-                                salary = input("💰 New salary: ").strip()
+                                salary = input("New salary: ").strip()
                                 if salary.isdigit():
                                     break
                                 else:
-                                    print("❌ Salary should be a valid number.")
+                                    print("Salary should be a valid number.")
                                     speaker.Speak("Salary should be a valid number.")
 
                         except ValueError:
-                            print("⚠️ Please enter a valid number for salary.")
+                            print("Please enter a valid number for salary.")
                             speaker.Speak("Please enter a valid number for salary.")
                             return
                         
@@ -297,31 +294,31 @@ def update_employee():
             if found:
                 with open(data_file, "w") as file:
                     file.writelines(updated_lines)
-                print("\n✅ Employee details updated successfully!")
+                print("\nEmployee details updated successfully!")
                 speaker.Speak("Employee details updated successfully!")
                 break
             else:
-                print("❌ No employee found with that ID.")
+                print("No employee found with that ID.")
                 speaker.Speak("No employee found with that ID.")
 
         except FileNotFoundError:
-            print("⚠️ No data file found. Add some employees first!")
+            print("No data file found. Add some employees first!")
             speaker.Speak("No data file found. Add some employees first!")
             break
 
 
 def delete_employee():
-    print("\n🗑️  Delete Employee")
+    print("\nDelete Employee")
     speaker.Speak("Delete Employee")
     while True:
         speaker.Speak("Enter the Employee ID to delete: ")
-        emp_id = input("🆔 Enter the Employee ID to delete: ").strip()
+        emp_id = input("Enter the Employee ID to delete: ").strip()
         updated_lines = []
         found = False
         speaker.Speak("Are you sure? Type 'yes' to proceed: ")
-        confirm = input("❓ Are you sure? Type 'yes' to proceed: ").lower()
+        confirm = input("Are you sure? Type 'yes' to proceed: ").lower()
         if confirm != "yes":
-            print("❌ Action cancelled.")
+            print("Action cancelled.")
             speaker.Speak("Action cancelled.")
             return
         else:
@@ -329,7 +326,7 @@ def delete_employee():
                 for line in file:
                     if extract_emp_id(line) == emp_id:
                         speaker.Speak("Deleting")
-                        print(f"🧾 Deleting: {line.strip()}")
+                        print(f"Deleting: {line.strip()}")
                         found = True
                         continue
                     if line.strip():
@@ -338,20 +335,20 @@ def delete_employee():
             if found:
                 with open(data_file, "w") as file:
                     file.writelines("\n".join(updated_lines))
-                print("\n✅ Employee deleted successfully!")
+                print("\nEmployee deleted successfully!")
                 speaker.Speak("Employee deleted successfully!")
                 break
             else:
-                print("❌ No employee found with that ID.")
+                print("No employee found with that ID.")
                 speaker.Speak("No employee found with that ID.")
 
 
 def run_employees_program():
-    print("\n👋 Welcome to the Employee Management System!")
+    print("\nWelcome to the Employee Management System!")
     speaker.Speak("Welcome to the Employee Management System!")
     while True:
-      print("\n📌 ---- MENU ----\n1️⃣  Add Employee\n2️⃣  View All Employees\n3️⃣  View Employee\n4️⃣  Update Employee\n5️⃣  Delete Employee\n6️⃣  Exit")
-      choice = input("👉 Choose an option: ").lower().strip()
+      print("\n---- MENU ----\n1️. Add Employee\n2️. View All Employees\n3️. View Employee\n4️. Update Employee\n5️. Delete Employee\n6️. Exit")
+      choice = input("Choose an option: ").lower().strip()
       if "add" in choice or "1" in choice:
           add_employee()
 
@@ -359,11 +356,11 @@ def run_employees_program():
         try:
             with open(data_file, "r") as file:
                 speaker.Speak("All Employees:")
-                print("\n📋 All Employees:\n")
+                print("\nAll Employees:\n")
                 print(file.read())
 
         except FileNotFoundError:
-            print("⚠️ No data file found. Add employees first!")
+            print("No data file found. Add employees first!")
             speaker.Speak("No data file found. Add employees first!")
 
       elif "view" in choice or "3" in choice:
@@ -376,7 +373,7 @@ def run_employees_program():
         delete_employee()
 
       elif "exit" in choice or "6" in choice:
-          print("\n👋 Goodbye! Have a productive day!\n")
+          print("\nGoodbye! Have a productive day!\n")
           speaker.Speak("Goodbye! Have a productive day!")
           break
       

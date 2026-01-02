@@ -17,6 +17,7 @@ for question, option in general_knowledge_quiz.items():
             if choose_answer == option['answer']:
                 print(f"Correct! The Answer is: {choose_answer}")
                 student_marks += 5
+                
             else:
                 print(f"Incorrect! The Answer is: {option['answer']}")
             break

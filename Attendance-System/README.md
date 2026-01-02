@@ -26,7 +26,7 @@ This program allows you to mark attendance for a list of students, display a sum
 
 ## ⚙️ Installation  
 
-1. Clone the repository (or download the file):  
+1. Clone the repository (or download the file):
    ```bash
    git clone https://github.com/faizanfk01/Attendance-System.git
    cd attendance-system

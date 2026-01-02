@@ -7,7 +7,6 @@ city = input("Enter the city name: ").capitalize().strip()
 url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}"
 
 get_data = requests.get(url)
-
 data = get_data.json()
 
 

@@ -7,13 +7,14 @@ def get_valid_phone():
             return phone
         else:
             print("Enter a valid phone number with country code as (+12)9876543210.")
-
+            
 def get_valid_hour():
     while True:
         try:
             hour = int(input("Enter the Hour (0-23): "))
             if 0 <= hour <= 23:
                 return hour
+                
             else:
                 print("Hour must be between 0 and 23.")
         except ValueError:

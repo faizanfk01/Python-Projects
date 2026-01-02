@@ -18,7 +18,7 @@ Since all projects are stored in this one main repository, you can get everythin
 Open your terminal or command prompt and run:
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/Python-Projects.git](https://github.com/YOUR_USERNAME/Python-Projects.git)
+git clone https://github.com/faizanfk01/Python-Projects.git
 
 ```
 

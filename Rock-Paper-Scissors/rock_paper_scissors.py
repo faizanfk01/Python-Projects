@@ -8,6 +8,7 @@ def rock_paper_scissors():
         if player_choice not in choices:
             print("Invalid choice. Please try again.")
             continue
+            
         else:
             print(f"Computer Choose: {computer_choice}")
             print(f"Player Choose: {player_choice}")

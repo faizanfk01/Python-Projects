@@ -61,7 +61,7 @@ url = "https://example.com"
 **Example Output:**
 A QR code image that links directly to the provided URL.
 
----
+----
 
 ## 📂 File Structure
 

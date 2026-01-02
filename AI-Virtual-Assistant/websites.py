@@ -20,5 +20,6 @@ websites = {
     "zoom": "https://zoom.us/",
     "coursera": "https://www.coursera.org/",
     "udemy": "https://www.udemy.com/",
-    "news": "https://www.bbc.com/news"
+    "news": "https://www.bbc.com/news",
+    "gemini": "https://gemini.google.com"
 }

@@ -15,7 +15,6 @@ driver = webdriver.Chrome(options=options)
 
 driver.get("https://web.whatsapp.com")
 print("WhatsApp Web opened")
-
 time.sleep(10)
 
 def get_last_message():

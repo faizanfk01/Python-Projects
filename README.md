@@ -55,7 +55,3 @@ If you find any of these scripts interesting or useful, please **give this repos
 It helps keep the motivation high to build more cool stuff.
 
 Happy Coding! 💻
-
-```
-
-```

@@ -3,7 +3,7 @@
 An **all-in-one AI-powered desktop assistant** 🖥️  
 This assistant can listen to your voice, answer questions with OpenAI, read the news, manage your credentials, handle employee data, open websites, and even control your computer!  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## ✨ Features  
 
@@ -166,3 +166,4 @@ This project is licensed under the MIT License – free to use and modify.
 ## 🌟 Show Some Love
 
 If you liked this project, please ⭐ the repository to support development 🚀
+

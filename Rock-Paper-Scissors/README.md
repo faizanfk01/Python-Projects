@@ -13,7 +13,7 @@ Test your luck and strategy against the computer in this classic game — all fr
 - ✅ Option to play multiple rounds  
 - ✅ Simple and interactive command-line interface  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
 

@@ -25,7 +25,7 @@ This program allows you to **add, view, update, delete, and export products to C
 - Python 3.x installed on your system.
 - Basic understanding of running Python scripts.
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ### Installation
 

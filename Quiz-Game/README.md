@@ -13,7 +13,7 @@ This project lets you test your knowledge with multiple-choice questions and kee
 - ✅ Pass/fail evaluation based on your total score  
 - ✅ Simple menu-less interface, just answer questions sequentially  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
 

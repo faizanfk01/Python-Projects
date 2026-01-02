@@ -60,8 +60,7 @@ general_knowledge_quiz = {
         "b": "1",
         "c": "2",
         "d": "3",
-        "answer": "c"
-    },
+        "answer": "c"},
     "10. Who was the first man to step on the moon?": {
         "a": "Buzz Aldrin",
         "b": "Yuri Gagarin",

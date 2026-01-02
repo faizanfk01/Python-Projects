@@ -1,0 +1,20 @@
+The Product name is: Laptop | Product Category is: Electronics | Price is: Rs. 120000 | Stock is: 15 | Product ID is: 1
+The Product name is: Smart Phone | Product Category is: Electronics | Price is: Rs. 85000 | Stock is: 32 | Product ID is: 2
+The Product name is: Running Shoes | Product Category is: Sports | Price is: Rs. 7000 | Stock is: 45 | Product ID is: 3
+The Product name is: Office Chair | Product Category is: Furniture | Price is: Rs. 15000 | Stock is: 20 | Product ID is: 4
+The Product name is: Blender | Product Category is: Kitchen | Price is: Rs. 5000 | Stock is: 55 | Product ID is: 5
+The Product name is: School Bag | Product Category is: Accessories | Price is: Rs. 2500 | Stock is: 70 | Product ID is: 6
+The Product name is: Table Lamp | Product Category is: Home Decor | Price is: Rs. 3000 | Stock is: 18 | Product ID is: 7
+The Product name is: Water Bottle | Product Category is: Kitchen | Price is: Rs. 800 | Stock is: 90 | Product ID is: 8
+The Product name is: Wrist Watch | Product Category is: Accessories | Price is: Rs. 6500 | Stock is: 27 | Product ID is: 9
+The Product name is: Electric Kettle | Product Category is: Kitchen | Price is: Rs. 4000 | Stock is: 34 | Product ID is: 10
+The Product name is: Baby Diapers | Product Category is: Mom | Price is: Rs. 2000 | Stock is: 60 | Product ID is: 11
+The Product name is: T-Shirt | Product Category is: Clothing | Price is: Rs. 1200 | Stock is: 77 | Product ID is: 12
+The Product name is: Jeans | Product Category is: Clothing | Price is: Rs. 2500 | Stock is: 50 | Product ID is: 13
+The Product name is: Football | Product Category is: Sports | Price is: Rs. 1800 | Stock is: 42 | Product ID is: 14
+The Product name is: Bookshelf | Product Category is: Furniture | Price is: Rs. 9000 | Stock is: 9 | Product ID is: 15
+The Product name is: Microwave Oven | Product Category is: Kitchen | Price is: Rs. 18000 | Stock is: 14 | Product ID is: 16
+The Product name is: Sunglasses | Product Category is: Accessories | Price is: Rs. 2200 | Stock is: 65 | Product ID is: 17
+The Product name is: Refrigerator | Product Category is: Electronics | Price is: Rs. 95000 | Stock is: 8 | Product ID is: 18
+The Product name is: Pillow | Product Category is: Home Decor | Price is: Rs. 600 | Stock is: 83 | Product ID is: 19
+The Product name is: Gaming Headset | Product Category is: Electronics | Price is: Rs. 8000 | Stock is: 25 | Product ID is: 20

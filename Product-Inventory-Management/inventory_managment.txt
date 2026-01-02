@@ -17,4 +17,4 @@ The Product name is: Microwave Oven | Product Category is: Kitchen | Price is: R
 The Product name is: Sunglasses | Product Category is: Accessories | Price is: Rs. 2200 | Stock is: 65 | Product ID is: 17
 The Product name is: Refrigerator | Product Category is: Electronics | Price is: Rs. 95000 | Stock is: 8 | Product ID is: 18
 The Product name is: Pillow | Product Category is: Home Decor | Price is: Rs. 600 | Stock is: 83 | Product ID is: 19
-The Product name is: Gaming Headset | Product Category is: Electronics | Price is: Rs. 8000 | Stock is: 25 | Product ID is: 20
+The Product name is: Gaming Headset | Product Category is: Electronics | Price is: Rs. 8000 | Stock is: 25 | Product ID is: 21

@@ -12,7 +12,7 @@ This project uses the **NewsAPI** to get real-time news articles and displays th
 - ✅ Easy to use command-line interface  
 - ✅ Fetch multiple articles in real-time  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🛠️ Tech Stack
 

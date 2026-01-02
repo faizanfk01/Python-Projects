@@ -21,7 +21,7 @@ This program allows you to **check real-time weather conditions and temperature*
 - Python 3.x installed on your system.  
 - An **API Key** from [OpenWeatherMap](https://openweathermap.org/api).  
 
-------------------------------------------------------------------------  
+------------------------------------------------------------------------
 
 ### Installation  
 

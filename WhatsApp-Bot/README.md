@@ -13,7 +13,7 @@ This project uses **PyWhatKit** to automate WhatsApp messaging directly from you
 - ✅ Validate hour and minute input  
 - ✅ Easy-to-use menu-based command-line interface  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🛠️ Tech Stack & Requirements
 

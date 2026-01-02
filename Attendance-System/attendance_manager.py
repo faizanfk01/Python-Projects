@@ -79,6 +79,7 @@ def main():
     choice = input("\nDo you want to save attendance in a CSV file? (Y/N): ").lower().strip()
     if choice == "y":
         save_to_csv("attendance.csv", date_today, present_students, absent_students)
+        
     else:
         print("Attendance not saved in a file.")
 

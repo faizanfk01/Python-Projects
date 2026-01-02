@@ -1,10 +1,11 @@
 # 🐍 Python Projects Collection
 
-Welcome to my code collection! 👋
+![Python](https://img.shields.io/badge/Python-Core%20Logic-blue?style=for-the-badge&logo=python&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
 
-This repository is the home for all my **Python projects**. Everything here was built for fun, practice, and experimentation.
+Welcome. This repository hosts a curated collection of Python projects developed to explore and implement core software engineering concepts.
 
-All the code here is **Pure Python**. No heavy frameworks or complicated setups—just raw logic and creativity. You will find a variety of scripts ranging from automation tools and small games to logical problem solvers.
+The objective of this collection is to showcase solutions built with **Standard Python**, prioritizing clean code structure and algorithmic efficiency. The codebase spans diverse domains, including enterprise resource management, intelligent automation, and API-driven data processing.
 
 ---
 

@@ -42,6 +42,7 @@ def open_ai(prompt):
       {"role": "user", "content": prompt},
     ]
   )
+
   print(completion.choices[0].message.content)
   speaker.Speak(completion.choices[0].message.content)
 

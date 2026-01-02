@@ -13,7 +13,7 @@ The bot mimics human conversation, replies in the same language and tone, and ca
 - ✅ Recognizes media messages (stickers, photos, voice notes, documents) and responds appropriately  
 - ✅ Continuous monitoring of WhatsApp Web for new messages  
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🛠️ Tech Stack & Requirements
 

@@ -70,6 +70,7 @@ def add_product():
         name = input("Enter product name: ").title().strip()
         if is_valid_text(name):
             break
+            
         else:
             print("Name should not contain numbers or special characters.")
 

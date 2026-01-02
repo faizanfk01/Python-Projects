@@ -80,7 +80,7 @@ update, delete, and export** to CSV --- all from a user-friendly
     7️⃣  Exit
     👉 Choose an option:
 
-------------------------------------------------------------------------
+-----------------------------------------------------------------------
 
 ## 🔮 Future Enhancements
 

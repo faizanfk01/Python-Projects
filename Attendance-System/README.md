@@ -7,7 +7,7 @@ This program allows you to mark attendance for a list of students, display a sum
 
 ## 🚀 Features  
 
-- 👨‍🎓 **Mark Attendance**: Mark each student as Present (P) or Absent (A).  
+- 👨‍🎓 **Mark Attendance**: Mark each student as Present (P) or Absent (A).
 - 📊 **Summary Report**: Get a quick summary of present and absent students.  
 - 💾 **Save to CSV**: Optionally save attendance records with date, name, roll number, and status.  
 - 📅 **Date Tracking**: Automatically records today’s date (or lets you enter a custom date).  

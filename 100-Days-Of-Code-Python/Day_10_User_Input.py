@@ -1,0 +1,11 @@
+name = input("What's your name: ")
+age = int(input("How old are you: "))
+class1 = input("In which class do you study?: ")
+job = input("What is your Job: ")
+fsc = float(input("Your fsc percentage: "))
+
+print(f"My name is {name}")
+print(f"I am {age} years old")
+print(f"I study in {class1} Year")
+print(f"I am a {job}")
+print(f"My FSC Percentage is {fsc}")

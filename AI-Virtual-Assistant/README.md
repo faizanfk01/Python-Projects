@@ -157,13 +157,8 @@ This project requires **Python 3.x** and the following libraries:
 
 ------------------------------------------------------------------------
 
-## 📜 License
-
-This project is licensed under the MIT License – free to use and modify.
-
-------------------------------------------------------------------------
-
 ## 🌟 Show Some Love
 
 If you liked this project, please ⭐ the repository to support development 🚀
+
 

@@ -39,7 +39,7 @@ api_key = "YOUR_API_KEY_HERE"
 1. **Clone the repository:**
 ```bash
 git clone [https://github.com/faizanfk01/Python-Projects.git](https://github.com/faizanfk01/Python-Projects.git)
-cd Python-Projects/Weather-App-GUI
+cd Python-Projects/Weather-App
 
 ```
 
@@ -57,7 +57,7 @@ python main.py
 ## 📂 File Structure
 
 ```text
-Weather-App-GUI/
+Weather-App/
 ├── main.py         # Main PyQt5 application script
 ├── README.md       # Project documentation
 

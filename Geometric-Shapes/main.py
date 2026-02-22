@@ -34,7 +34,7 @@ class Triangle(Shape):
     def __str__(self):
         return f"Area of Triangle is: {self.area()}"
 
-shapes = [Circle(25), Rectangle(5, 8), Triangle(8, 12)]
+shapes = [Circle(25), Rectangle(5, 8), Triangle(8, 12)] #Objects
 
 for shape in shapes:
     print(shape)

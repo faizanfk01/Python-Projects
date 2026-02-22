@@ -33,8 +33,6 @@ class Triangle(Shape):
     
     def __str__(self):
         return f"Area of Triangle is: {self.area()}"
-    
-user_input = int(input("Enter a number: "))
 
 shapes = [Circle(25), Rectangle(5, 8), Triangle(8, 12)]
 

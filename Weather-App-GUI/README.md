@@ -1,4 +1,4 @@
-# 🌤️ PyQt5 Weather App (with Smart Advice)
+# 🌤️ Weather App (with Smart Advice)
 
 A sleek, dark-themed desktop weather application built using Python and **PyQt5**. 
 

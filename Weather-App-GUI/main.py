@@ -6,7 +6,7 @@ from PyQt5.QtCore import Qt
 class WeatherApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Weather App by Faizan")
+        self.setWindowTitle("Weather")
         self.setFixedSize(650, 980) 
         self.initUI()
 
